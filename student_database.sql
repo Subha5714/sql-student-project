@@ -52,7 +52,8 @@ INSERT INTO courses VALUES
 (104, 'Data Structures', 4);
 
 -- Join students with courses
-SELECT students.name, courses.course_name
+SELECT students.name, 
+courses.course_name
 FROM students
 INNER JOIN courses
 ON students.student_id = courses.student_id;
