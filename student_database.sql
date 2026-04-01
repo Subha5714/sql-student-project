@@ -45,51 +45,10 @@ INSERT INTO courses VALUES
 (103, 'Web Development', 3),
 (104, 'Data Structures', 4);
 
+-- INNER JOIN to combine student and course data
 -- Join students with courses
 SELECT students.name, 
 courses.course_name
-FROM students
-INNER JOIN courses
-ON students.student_id = courses.student_id;
-
--- Create courses table
-CREATE TABLE courses (
-    course_id INT PRIMARY KEY,
-    course_name VARCHAR(50),
-    student_id INT,
-    FOREIGN KEY (student_id) REFERENCES students(student_id)
-);
-
--- Insert course data
-INSERT INTO courses VALUES
-(101, 'DBMS', 1),
-(102, 'SQL', 2),
-(103, 'Web Dev', 3),
-(104, 'DSA', 4);
-
--- Join students with courses
-SELECT students.name, courses.course_name
-FROM students
-INNER JOIN courses
-ON students.student_id = courses.student_id;
-
--- Create courses table
-CREATE TABLE courses (
-    course_id INT PRIMARY KEY,
-    course_name VARCHAR(50),
-    student_id INT,
-    FOREIGN KEY (student_id) REFERENCES students(student_id)
-);
-
--- Insert course data
-INSERT INTO courses VALUES
-(101, 'DBMS', 1),
-(102, 'SQL', 2),
-(103, 'Web Development', 3),
-(104, 'Data Structures', 4);
-
--- Join students with courses
-SELECT students.name, courses.course_name
 FROM students
 INNER JOIN courses
 ON students.student_id = courses.student_id;
